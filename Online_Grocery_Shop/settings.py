@@ -26,7 +26,7 @@ SECRET_KEY = '7#q*9gbcacgr7=$k8k%ljvvi^u%m11!ak)&2$7pfe@##w&s45w'
 from decouple import config
 
 DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = ['your-app-name.onrender.com']
+ALLOWED_HOSTS = ['sweetshop.onrender.com']
 
 
 
