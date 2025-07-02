@@ -1,1 +1,1 @@
-web: gunicorn Online_Sweet_Shop.wsgi
+web: gunicorn Online_Grocery_Shop.wsgi
