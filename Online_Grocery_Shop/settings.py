@@ -23,9 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7#q*9gbcacgr7=$k8k%ljvvi^u%m11!ak)&2$7pfe@##w&s45w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+from decouple import config
 
-ALLOWED_HOSTS = []
+DEBUG = config('DEBUG', default=False, cast=bool)
+ALLOWED_HOSTS = ['your-app-name.onrender.com']
+
+
 
 
 # Application definition
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Online_Grocery_Shop',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
